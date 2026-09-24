@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sky Salvager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="panel-open">
+    <main class="game-shell">
+        <canvas id="gameCanvas" aria-label="Sky Salvager game"></canvas>
+
+        <header class="hud topbar">
+            <div class="brand"><span class="brand-mark">✦</span> SKY SALVAGER</div>
+            <div class="score">
+                <span class="eyebrow">SALVAGE SCORE</span>
+                <strong id="score">0000</strong>
+            </div>
+            <button class="quiet-button sound-control" id="soundButton" type="button">SOUND ON</button>
+        </header>
+
+        <section class="hud stats" aria-label="Flight status">
+            <div class="stat">
+                <span class="eyebrow">TIME</span>
+                <strong id="time">45</strong>
+                <div class="meter"><i id="timeBar"></i></div>
+            </div>
+            <div class="stat">
+                <span class="eyebrow">HULL</span>
+                <strong id="hull">03</strong>
+                <div class="meter hull-meter"><i id="hullBar"></i></div>
+            </div>
+        </section>
+
+        <div id="toast" class="toast" role="status"></div>
+
+        <footer class="hud controls">
+            <div class="help">STEER <b>A</b><b>D</b> <span>OR ARROWS</span></div>
+            <label class="volume-control">
+                MUSIC
+                <input class="volume-slider" id="volume" type="range" min="0" max="100" value="50">
+                <output id="volumeOutput">50</output>
+            </label>
+            <button class="quiet-button" id="pauseButton" type="button">PAUSE <b>P</b></button>
+        </footer>
+
+        <section class="panel" id="menuPanel">
+            <div class="panel-card">
+                <span class="eyebrow">A SMALL SKY ARCADE</span>
+                <h1>Sky <em>Salvager</em></h1>
+                <p>Catch falling sun shards, dodge storm mines, and make it home before the landing beacon closes.</p>
+                <button class="primary-button" id="startButton" type="button">TAKE OFF <span>→</span></button>
+            </div>
+        </section>
+
+        <section class="panel" id="pausePanel" hidden>
+            <div class="panel-card">
+                <span class="eyebrow">FLIGHT HOLD</span>
+                <h2>Paused</h2>
+                <p>Press P to return to the sky or Q to abandon this flight.</p>
+                <button class="primary-button" id="resumeButton" type="button">RESUME FLIGHT</button>
+            </div>
+        </section>
+
+        <section class="panel" id="resultPanel" hidden>
+            <div class="panel-card">
+                <span class="eyebrow" id="resultEyebrow">FLIGHT COMPLETE</span>
+                <h2 id="resultTitle">Touchdown</h2>
+                <p id="resultText"></p>
+                <div class="actions">
+                    <button class="primary-button" id="againButton" type="button">FLY AGAIN</button>
+                    <button class="secondary-button" id="menuButton" type="button">MAIN MENU</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
