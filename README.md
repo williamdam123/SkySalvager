@@ -13,17 +13,17 @@ Sky Salvager is a browser-based game where you play as a ship and you have 30 se
 3. Choose the project folder:
 SkySalvager
 4. Confirm these files are present:
-- index.html
-- play.html
-- styles.css
-- main.js
-- game.js
-- renderer.js
-- audio.js
+   - index.html
+   - play.html
+   - styles.css
+   - main.js
+   - game.js
+   - renderer.js
+   - audio.js
 5. Install the Live Server extension:
-- Open the Extensions panel with Ctrl+Shift+X.
-- Search for Live Server.
-- Install Live Server by Ritwick Dey.
+   - Open the Extensions panel with Ctrl+Shift+X.
+   - Search for Live Server.
+   - Install Live Server by Ritwick Dey.
 6. Open index.html or play.html.
 7. Right-click the file and select Open with Live Server.
 8. The game should open at a local address similar to:
@@ -34,11 +34,11 @@ http://127.0.0.1:5500/play.html
 ## Start Playing
 1. Click TAKE OFF.
 2. Move the ship using:
-- A
-- D
-- Left Arrow
-- Right Arrow
-- Mouse or pointer movement
+   - A
+   - D
+   - Left Arrow
+   - Right Arrow
+   - Mouse or pointer movement
 3. Collect sun shards for points.
 4. Avoid storm mines.
 5. Press P to pause.
@@ -47,6 +47,7 @@ http://127.0.0.1:5500/play.html
 
 ## Why Use Live Server?
 The game uses JavaScript modules such as:
+<script type="module" src="main.js"></script>
 Browsers may block these modules when opening the HTML file directly with . Live Server provides the local web server needed for modules, audio, and reliable browser behavior.
 
 ## If the Game Does Not Start
